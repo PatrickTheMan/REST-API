@@ -1,0 +1,54 @@
+﻿@model B2S_REST_API.Domain.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PrdName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PrdName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PrdProductNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PrdProductNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PrdEanGlr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PrdEanGlr)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PrdProductText)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PrdProductText)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Brd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Brd.BrdId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Grp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Grp.GrpId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.PrdId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

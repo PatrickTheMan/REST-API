@@ -1,0 +1,43 @@
+﻿- Delete Alias (ID)
+
+- Get Alias - Returns All Brands
+
+- Post Alias (Brand)
+
+- Update Alias (ID, Brand)
+
+- Delete Brand (ID)
+
+- Get Brands - Returns All Brands
+- Get Brand (Alias) - Return Brand
+
+- Post Brand (Brand)
+
+- Update Brand (ID, Brand)
+
+- Delete ItemGroup (ID)
+
+- Get ItemGroup - Returns All ItemGroups
+
+- Post ItemGroup (ItemGroup)
+
+- Update ItemGroup (ID, ItemGroup)
+
+- Delete Product (ID)
+
+- Get Products - Returns All Products
+- Get Products (Brand) - Returns All Products
+- Get Products (ItemGroup) - Returns All Products
+- Get Products (EAN) - Return Product
+- Get Products (ProductNumber) - Return Product(s) (Can be unfinished)
+
+- Get Products (HttpRequest)
+
+X/- Get ProductOCR (String)
+// 1. Goes through all the different words (OCR)
+// 2. Compare to Brand, EAN and ProductNumber
+// 3. Return Product or null
+
+- Post Product (Product)
+
+- Update Product (ID, Product)

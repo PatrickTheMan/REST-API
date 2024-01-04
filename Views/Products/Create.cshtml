@@ -1,0 +1,60 @@
+﻿@model B2S_REST_API.Domain.Product
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PrdName" class="control-label"></label>
+                <input asp-for="PrdName" class="form-control" />
+                <span asp-validation-for="PrdName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrdProductNumber" class="control-label"></label>
+                <input asp-for="PrdProductNumber" class="form-control" />
+                <span asp-validation-for="PrdProductNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrdEanGlr" class="control-label"></label>
+                <input asp-for="PrdEanGlr" class="form-control" />
+                <span asp-validation-for="PrdEanGlr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrdProductText" class="control-label"></label>
+                <input asp-for="PrdProductText" class="form-control" />
+                <span asp-validation-for="PrdProductText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GrpId" class="control-label"></label>
+                <select asp-for="GrpId" class ="form-control" asp-items="ViewBag.GrpId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="SpecId" class="control-label"></label>
+                <select asp-for="SpecId" class ="form-control" asp-items="ViewBag.SpecId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="BrdId" class="control-label"></label>
+                <select asp-for="BrdId" class ="form-control" asp-items="ViewBag.BrdId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "Server=LAPTOP-FD71NK7O;User ID=Buy2SellUser;Password=Buy2SellLogin;Database=Buy2Sell;Trusted_Connection=True;TrustServerCertificate=true;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Domain -f

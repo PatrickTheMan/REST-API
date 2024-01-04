@@ -1,0 +1,65 @@
+﻿@model IEnumerable<B2S_REST_API.Domain.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PrdName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrdProductNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrdEanGlr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrdProductText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Brd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grp)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrdName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrdProductNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrdEanGlr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrdProductText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brd.BrdId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Grp.GrpId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PrdId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PrdId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PrdId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
